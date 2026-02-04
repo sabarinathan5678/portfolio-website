@@ -70,3 +70,22 @@ h2 {
 #ww{
   color: black;
 }
+
+.one{
+  display: inline;
+  background-color: black;
+  color: white;
+  gap: 30px;
+  
+}
+
+#menu{
+  background-color: black;
+ align-items:center;
+  justify-content: center;
+  display: flex;
+  gap: 25px;
+  margin: 0%;
+  padding: 0%;
+  gap: 60%;
+}
