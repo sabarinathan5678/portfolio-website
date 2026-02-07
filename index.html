@@ -3,67 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <title>My Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- HEADER -->
   <header>
     <h1>Sabarinathan R</h1>
     <p>Full Stack Developer</p>
   </header>
 
-  <section id="menu">
-    <nav>
-      <ul>
-      <li class="one">About Me</li>
-      <li class="one">Skills</li>
-      <li class="one">Projects</li>
-      <li class="one">contact</li>
-      </ul>
-    </nav>
-  </section>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p><p>
-I am an aspiring Full Stack Developer with strong knowledge in HTML, CSS, and JavaScript.
-Currently building real-world projects and expanding my backend skills.
-</p>
-</p>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
+  <!-- NAVBAR -->
+  <nav>
     <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-      <li>mangodb</li>
-      <li>node.js</li>
-      <li>React.js</li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="project.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
+  </nav>
+
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <div class="about-container">
+
+      <div class="about-image">
+        <img src="developer.jpg" alt="About Me">
+      </div>
+
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+          I am a passionate Computer Science student specializing in full-stack web development.
+          I have built multiple real-world projects including a Leave Management System and a
+          personal portfolio website. I am eager to learn new technologies and build meaningful
+          software solutions.
+        </p>
+      </div>
+
+    </div>
   </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <h3 id="portfolio">portfolio website</h3>
-    <p>Personal portfolio website to showcase my skills, projects, and contact details with a clean, responsive, and user-friendly design.</p>
-    <h3 class="tools" id="abc">Tools: </h3>
-    <p class="tools">HTML,CSS,JavaScript</p>
-    <br>
-    <h3 id="project2">Leave Management System</h3>
-    <p>Personal portfolio website to showcase my skills, projects, and contact details with a clean, responsive, and user-friendly design.</p>
-    <h3 class="nn" id="vv">Tools: </h3>
-    <p class="nn">HTML,CSS,JavaScript</p>
-  </section>
+  <!-- FOOTER -->
+  <footer id="contact">
+    <p>© 2026 Sabarinathan R | All Rights Reserved</p>
+  </footer>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p class="email" id="ww">Email: </p>
-    <p class="email">Sabarinathan8056865@gmail.com</p>
-  </section>
-
-  <script src="script.js"></script>
 </body>
 </html>

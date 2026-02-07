@@ -1,0 +1,97 @@
+<section id="skills" class="skills-section">
+  <h2>Skills</h2>
+
+  <div class="skills-row">
+    <div class="skill">
+      <img src="html.png" alt="HTML">
+      <p>HTML</p>
+    </div>
+    <div class="skill">
+      <img src="css.png" alt="CSS">
+      <p>CSS</p>
+    </div>
+    <div class="skill">
+      <img src="JavaScript.png" alt="JavaScript">
+      <p>JavaScript</p>
+    </div>
+  </div>
+</section>
+
+<style>
+    .skills-section {
+  padding: 60px 20px;
+  margin: 60px auto;
+  width: 90%;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.02)
+  );
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+
+  color: #fff;
+  text-align: center;
+}
+
+.skills-section {
+  padding: 60px 20px;
+  margin: 60px auto;
+  width: 90%;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.02)
+  );
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+
+  color: #fff;
+  text-align: center;
+}
+
+.skills-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-top: 40px;
+  flex-wrap: wrap; /* mobile-la break aagum */
+}
+
+.skill {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  border-radius: 15px;
+  width: 140px;
+
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill img {
+  width: 80px;
+  height: 80px;
+}
+
+.skill p {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.skill:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+</style>
