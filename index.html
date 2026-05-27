@@ -2,359 +2,398 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sabari | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sabarinathan | Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-      scroll-behavior: smooth;
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+      scroll-behavior:smooth;
     }
 
-    body {
-      background: #0a0a0a;
-      color: white;
-      overflow-x: hidden;
+    body{
+      background:#0f172a;
+      color:white;
     }
 
-    /* Animated Background */
-    .bg {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      background: radial-gradient(circle at 20% 20%, #6c63ff33, transparent),
-                  radial-gradient(circle at 80% 80%, #00f2ff33, transparent),
-                  #0a0a0a;
+    header{
+      position:fixed;
+      width:100%;
+      top:0;
+      left:0;
+      background:rgba(15,23,42,0.9);
+      backdrop-filter:blur(10px);
+      z-index:1000;
     }
 
-    /* Navbar */
-    nav {
-      display: flex;
-      justify-content: space-between;
-      padding: 20px 10%;
-      position: fixed;
-      width: 100%;
-      backdrop-filter: blur(10px);
-      background: rgba(0,0,0,0.4);
-      z-index: 1000;
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 10%;
     }
 
-    nav h2 {
-      color: #6c63ff;
-      font-weight: 800;
+    nav h1{
+      color:#38bdf8;
+      font-size:28px;
     }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: 500;
-      transition: 0.3s;
+    nav ul{
+      display:flex;
+      gap:25px;
+      list-style:none;
     }
 
-    nav a:hover {
-      color: #00f2ff;
+    nav ul li a{
+      text-decoration:none;
+      color:white;
+      transition:0.3s;
     }
 
-    /* Hero Section */
-    .hero {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      text-align: center;
-      padding: 0 20px;
+    nav ul li a:hover{
+      color:#38bdf8;
     }
 
-    .hero h1 {
-      font-size: 3.5rem;
-      font-weight: 800;
+    section{
+      padding:100px 10%;
     }
 
-    .hero span {
-      color: #6c63ff;
+    .hero{
+      height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
     }
 
-    .typing {
-      font-size: 1.5rem;
-      margin-top: 15px;
-      color: #00f2ff;
-      height: 40px;
+    .hero-text{
+      max-width:600px;
     }
 
-    .btn {
-      margin-top: 30px;
-      padding: 12px 28px;
-      border-radius: 30px;
-      border: none;
-      background: linear-gradient(45deg, #6c63ff, #00f2ff);
-      color: white;
-      font-size: 16px;
-      cursor: pointer;
-      transition: 0.4s;
+    .hero-text h2{
+      font-size:55px;
+      margin-bottom:10px;
     }
 
-    .btn:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 20px #6c63ff;
+    .hero-text h2 span{
+      color:#38bdf8;
     }
 
-    /* Section Common */
-    section {
-      padding: 100px 10%;
+    .hero-text h3{
+      font-size:28px;
+      color:#cbd5e1;
+      margin-bottom:20px;
     }
 
-    h2.section-title {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 50px;
-      color: #6c63ff;
+    .hero-text p{
+      color:#94a3b8;
+      line-height:1.8;
+      margin-bottom:30px;
     }
 
-    /* About */
-    .about p {
-      text-align: center;
-      max-width: 800px;
-      margin: auto;
-      line-height: 1.8;
-      color: #ccc;
-      font-size: 18px;
+    .btn{
+      padding:12px 28px;
+      background:#38bdf8;
+      color:#0f172a;
+      border:none;
+      border-radius:8px;
+      font-weight:600;
+      text-decoration:none;
+      transition:0.3s;
+      margin-right:15px;
     }
 
-    /* Skills */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 20px;
+    .btn:hover{
+      background:white;
+      transform:translateY(-3px);
     }
 
-    .skill-card {
-      background: #111;
-      padding: 25px;
-      border-radius: 15px;
-      text-align: center;
-      transition: 0.3s;
-      border: 1px solid #222;
+    .hero-img img{
+      width:350px;
+      border-radius:50%;
+      border:5px solid #38bdf8;
+      box-shadow:0 0 30px #38bdf8;
     }
 
-    .skill-card:hover {
-      transform: translateY(-10px);
-      border: 1px solid #6c63ff;
-      box-shadow: 0 0 20px #6c63ff33;
+    .title{
+      text-align:center;
+      margin-bottom:50px;
+      font-size:40px;
+      color:#38bdf8;
     }
 
-    /* Projects */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
+    .about p{
+      text-align:center;
+      color:#cbd5e1;
+      line-height:1.8;
+      max-width:900px;
+      margin:auto;
     }
 
-    .project-card {
-      background: #111;
-      border-radius: 20px;
-      padding: 20px;
-      transition: 0.4s;
-      border: 1px solid #222;
-      position: relative;
-      overflow: hidden;
+    .skills-container,
+    .projects-container,
+    .cert-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
     }
 
-    .project-card::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(120deg, transparent, #6c63ff33, transparent);
-      top: -100%;
-      left: 0;
-      transition: 0.5s;
+    .card{
+      background:#1e293b;
+      padding:25px;
+      border-radius:15px;
+      transition:0.3s;
+      border:1px solid transparent;
     }
 
-    .project-card:hover::before {
-      top: 100%;
+    .card:hover{
+      transform:translateY(-10px);
+      border-color:#38bdf8;
     }
 
-    .project-card:hover {
-      transform: scale(1.05);
-      border: 1px solid #00f2ff;
+    .card h3{
+      margin-bottom:15px;
+      color:#38bdf8;
     }
 
-    .project-card h3 {
-      margin-bottom: 10px;
+    .card p{
+      color:#cbd5e1;
+      line-height:1.7;
     }
 
-    .project-card p {
-      color: #aaa;
-      margin-bottom: 15px;
+    .contact{
+      text-align:center;
     }
 
-    .project-links a {
-      text-decoration: none;
-      color: #00f2ff;
-      margin-right: 15px;
-      font-weight: 600;
+    .contact a{
+      display:inline-block;
+      margin:10px;
+      color:white;
+      text-decoration:none;
+      background:#1e293b;
+      padding:12px 25px;
+      border-radius:10px;
+      transition:0.3s;
     }
 
-    /* Contact */
-    .contact {
-      text-align: center;
+    .contact a:hover{
+      background:#38bdf8;
+      color:#0f172a;
     }
 
-    .contact a {
-      color: white;
-      margin: 10px;
-      font-size: 18px;
-      text-decoration: none;
-      transition: 0.3s;
+    footer{
+      text-align:center;
+      padding:25px;
+      background:#020617;
+      color:#94a3b8;
     }
 
-    .contact a:hover {
-      color: #6c63ff;
-    }
+    @media(max-width:900px){
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #777;
-      border-top: 1px solid #222;
+      .hero{
+        flex-direction:column-reverse;
+        justify-content:center;
+        text-align:center;
+        gap:50px;
+      }
+
+      .hero-text h2{
+        font-size:40px;
+      }
+
+      .hero-img img{
+        width:250px;
+      }
+
+      nav{
+        flex-direction:column;
+        gap:20px;
+      }
     }
   </style>
 </head>
+
 <body>
-  <div class="bg"></div>
 
-  <nav>
-    <h2>Sabari.dev</h2>
-    <div>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+  <header>
+    <nav>
+      <h1>SABARI</h1>
+
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-text">
+      <h2>Hi, I'm <span>Sabarinathan</span></h2>
+
+      <h3>Full Stack Developer</h3>
+
+      <p>
+        Passionate Full Stack Developer and M.Sc Computer Science student
+        skilled in Java, JavaScript, MySQL, HTML, CSS, and AI-powered applications.
+        I love building responsive and scalable web applications.
+      </p>
+
+      <a href="#projects" class="btn">View Projects</a>
+
+      <a href="resume.pdf" class="btn">Download Resume</a>
     </div>
-  </nav>
 
-  <!-- Hero -->
-  <section class="hero">
-    <h1>Hi, I'm <span>Sabari</span></h1>
-    <div class="typing" id="typing"></div>
-    <button class="btn" onclick="scrollToProjects()">View My Work</button>
+    <div class="hero-img">
+      <img src="https://i.imgur.com/8RKXAIV.png" alt="profile">
+    </div>
+
   </section>
 
-  <!-- About -->
-  <section id="about" class="about">
-    <h2 class="section-title">About Me</h2>
+  <!-- ABOUT -->
+
+  <section class="about" id="about">
+
+    <h2 class="title">About Me</h2>
+
     <p>
-      I'm a passionate MERN Stack Developer who loves building modern, scalable,
-      and visually unique web applications. I focus on clean UI, smooth
-      animations, and real-world projects that solve problems.
+      I am currently pursuing M.Sc Computer Science and have hands-on experience
+      in full-stack development, responsive UI design, and AI-powered applications.
+      I completed an internship at SKAP Technologies where I worked on real client projects.
+      I enjoy solving problems and learning modern technologies.
     </p>
+
   </section>
 
-  <!-- Skills -->
+  <!-- SKILLS -->
+
   <section id="skills">
-    <h2 class="section-title">My Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-card">HTML</div>
-      <div class="skill-card">CSS</div>
-      <div class="skill-card">JavaScript</div>
-      <div class="skill-card">React</div>
-      <div class="skill-card">Node.js</div>
-      <div class="skill-card">MongoDB</div>
-      <div class="skill-card">Express</div>
-      <div class="skill-card">GitHub</div>
+
+    <h2 class="title">Skills</h2>
+
+    <div class="skills-container">
+
+      <div class="card">
+        <h3>Frontend</h3>
+        <p>HTML, CSS, JavaScript</p>
+      </div>
+
+      <div class="card">
+        <h3>Backend</h3>
+        <p>Java</p>
+      </div>
+
+      <div class="card">
+        <h3>Database</h3>
+        <p>MySQL</p>
+      </div>
+
+      <div class="card">
+        <h3>Tools</h3>
+        <p>Git, GitHub, VS Code</p>
+      </div>
+
     </div>
+
   </section>
 
-  <!-- Projects -->
+  <!-- PROJECTS -->
+
   <section id="projects">
-    <h2 class="section-title">My Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <h3>Payment Project</h3>
-        <p>Secure payment web app with OTP and modern UI design.</p>
-        <div class="project-links">
-          <a href="#">Live</a>
-          <a href="#">GitHub</a>
-        </div>
+
+    <h2 class="title">Projects</h2>
+
+    <div class="projects-container">
+
+      <div class="card">
+        <h3>AI HR Interview Simulator</h3>
+
+        <p>
+          AI-powered HR interview simulator with speech recognition,
+          resume analysis, role-specific interview questions,
+          and automated answer evaluation system.
+        </p>
       </div>
 
-      <div class="project-card">
-        <h3>Portfolio Website</h3>
-        <p>Unique animated developer portfolio using HTML, CSS, JS.</p>
-        <div class="project-links">
-          <a href="#">Live</a>
-          <a href="#">GitHub</a>
-        </div>
+      <div class="card">
+        <h3>Leave Management System</h3>
+
+        <p>
+          Full-stack leave management system with multi-role authentication,
+          automated workflow, and CRUD operations.
+        </p>
       </div>
 
-      <div class="project-card">
-        <h3>MERN App</h3>
-        <p>Full stack MERN application with authentication and dashboard.</p>
-        <div class="project-links">
-          <a href="#">Live</a>
-          <a href="#">GitHub</a>
-        </div>
+      <div class="card">
+        <h3>Personal Portfolio Website</h3>
+
+        <p>
+          Responsive portfolio website built using HTML, CSS, and JavaScript
+          with contact form and GitHub Pages deployment.
+        </p>
       </div>
+
     </div>
+
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="contact">
-    <h2 class="section-title">Contact Me</h2>
-    <p>Email: sabarinathan8056865@.com</p>
-    <a href="#">GitHub</a>
-    <a href="#">LinkedIn</a>
+  <!-- CERTIFICATIONS -->
+
+  <section>
+
+    <h2 class="title">Certifications</h2>
+
+    <div class="cert-container">
+
+      <div class="card">
+        <h3>JavaScript Programming</h3>
+        <p>GUVI - IIT Madras Incubated</p>
+      </div>
+
+      <div class="card">
+        <h3>Git Version Control</h3>
+        <p>GUVI - IIT Madras Incubated</p>
+      </div>
+
+      <div class="card">
+        <h3>MySQL</h3>
+        <p>GUVI - IIT Madras Incubated</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section class="contact" id="contact">
+
+    <h2 class="title">Contact Me</h2>
+
+    <a href="mailto:sabarinathan8056865@gmail.com">Email</a>
+
+    <a href="https://github.com/sabarinathan5678" target="_blank">GitHub</a>
+
+    <a href="https://linkedin.com/in/sabarinathan-r" target="_blank">LinkedIn</a>
+
+    <a href="https://leetcode.com/sabarinathan5678" target="_blank">LeetCode</a>
+
   </section>
 
   <footer>
-    © 2026 Sabari | Unique Developer Portfolio
+    © 2026 Sabarinathan R | Full Stack Developer
   </footer>
 
-  <script>
-    // Typing Animation
-    const text = [
-      "MERN Stack Developer",
-      "Frontend Developer",
-      "Creative Web Designer",
-      "Building Unique Websites 🚀"
-    ];
-
-    let index = 0;
-    let charIndex = 0;
-    const typingElement = document.getElementById("typing");
-
-    function typeEffect() {
-      if (charIndex < text[index].length) {
-        typingElement.innerHTML += text[index].charAt(charIndex);
-        charIndex++;
-        setTimeout(typeEffect, 80);
-      } else {
-        setTimeout(eraseEffect, 1500);
-      }
-    }
-
-    function eraseEffect() {
-      if (charIndex > 0) {
-        typingElement.innerHTML = text[index].substring(0, charIndex - 1);
-        charIndex--;
-        setTimeout(eraseEffect, 40);
-      } else {
-        index = (index + 1) % text.length;
-        setTimeout(typeEffect, 300);
-      }
-    }
-
-    typeEffect();
-
-    function scrollToProjects() {
-      document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
-    }
-  </script>
 </body>
 </html>
